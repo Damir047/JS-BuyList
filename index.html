@@ -1,16 +1,86 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homework</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+    <header>
+        <h1>Кошик</h1>
+    </header>
+
+    <main>
+        <section class="left-side">
+            
+            <fieldset>
+                <legend>Каталог товарів</legend>
+                <form action="/search" method="GET">
+                    <label for="q">Назва товару</label>
+                    <input type="text" id="q" name="q" required>
+                    <button type="submit">Додати</button>
+                </form>
+            </fieldset>
+            
+                <ul>
+
+                <li class="katalog">
+
+                    <span class="item-name">Помідори</span>
+
+                    <div class="item-amount">
+                        <button class="minus" data-tooltip="Зменшити">-</button>
+                        <span class="amount">2</span>
+                        <button class="plus" data-tooltip="Збільшити">+</button>
+
+                    </div>
+                    <div class="item-functions">
+
+                        <button class="status" data-tooltip="Змінити статус">Куплено</button>
+                        <button class="delete" data-tooltip="Видалити товар">X</button>
+
+                    </div>
+                </li>
+
+                <li class="katalog">
+
+                    <span class="item-name">Печиво</span>
+                    <div class="item-amount">
+
+                        <button class="minus" data-tooltip="Зменшити">-</button>
+                        <span class="amount">2</span>
+                        <button class="plus" data-tooltip="Збільшити">+</button>
+
+                    </div>
+                    <div class="item-functions">
+
+                        <button class="status" data-tooltip="Змінити статус">Не куплено</button>
+                    </div>
+                </li>
+
+                </ul>
+                
+        </section>
+
+        <section class="right-side">
+            
+            <h2>Залишилося</h2>
+            <hr>
+            <div class="left-items-section">
+                <span class="left-item">Печиво <span class="left-item-amount">2</span></span>
+            </div>
+            
+            <br>
+            
+            <h2>Куплено</h2>
+            <hr>
+            <div class="left-items-section">
+                <span class="left-item">Помідори <span class="left-item-amount">2</span></span>
+            </div>
+			
+        </section>
+        <div class="badge">Buy List</div>
+    </main>
 </body>
 </html>
