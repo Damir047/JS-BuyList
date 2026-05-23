@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Homework</title>
     <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,7 +17,7 @@
             
             <fieldset>
                 <legend>Каталог товарів</legend>
-                <form action="/search" method="GET">
+                <form action="/search" method="GET" id="add-field">
                     <label for="q">Назва товару</label>
                     <input type="text" id="q" name="q" required>
                     <button type="submit">Додати</button>
@@ -24,40 +25,6 @@
             </fieldset>
             
                 <ul>
-
-                <li class="katalog">
-
-                    <span class="item-name">Помідори</span>
-
-                    <div class="item-amount">
-                        <button class="minus" data-tooltip="Зменшити">-</button>
-                        <span class="amount">2</span>
-                        <button class="plus" data-tooltip="Збільшити">+</button>
-
-                    </div>
-                    <div class="item-functions">
-
-                        <button class="status" data-tooltip="Змінити статус">Куплено</button>
-                        <button class="delete" data-tooltip="Видалити товар">X</button>
-
-                    </div>
-                </li>
-
-                <li class="katalog">
-
-                    <span class="item-name">Печиво</span>
-                    <div class="item-amount">
-
-                        <button class="minus" data-tooltip="Зменшити">-</button>
-                        <span class="amount">2</span>
-                        <button class="plus" data-tooltip="Збільшити">+</button>
-
-                    </div>
-                    <div class="item-functions">
-
-                        <button class="status" data-tooltip="Змінити статус">Не куплено</button>
-                    </div>
-                </li>
 
                 </ul>
                 
@@ -67,16 +34,12 @@
             
             <h2>Залишилося</h2>
             <hr>
-            <div class="left-items-section">
-                <span class="left-item">Печиво <span class="left-item-amount">2</span></span>
+            <div class="left-items-section" id="left-items">
             </div>
-            
-            <br>
-            
+                        
             <h2>Куплено</h2>
             <hr>
-            <div class="left-items-section">
-                <span class="left-item">Помідори <span class="left-item-amount">2</span></span>
+            <div class="left-items-section" id="bought-items">
             </div>
 			
         </section>
